@@ -4,6 +4,7 @@ import pl.futurecollars.invoicing.db.Database;
 import pl.futurecollars.invoicing.model.Invoice;
 
 import java.util.List;
+import java.util.Optional;
 
 public class InvoiceService {
 
@@ -14,10 +15,10 @@ public class InvoiceService {
     }
 
     public int save(Invoice invoice) {
-        database.save(invoice);
+        return database.save(invoice);
     }
 
-    public void Optional(Invoice) getById(int id) {
+    public Optional<Invoice> getById(int id) {
         return database.getById(id);
     }
 

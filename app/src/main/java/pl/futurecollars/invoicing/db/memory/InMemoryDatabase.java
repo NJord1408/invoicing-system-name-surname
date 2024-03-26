@@ -1,5 +1,6 @@
 package pl.futurecollars.invoicing.db.memory;
 
+//import jdk.internal.access.JavaSecurityAccess;
 import pl.futurecollars.invoicing.db.Database;
 import pl.futurecollars.invoicing.model.Invoice;
 
@@ -15,7 +16,6 @@ public class InMemoryDatabase implements Database {
     public int save(Invoice invoice) {
         int id = nextId++;
         invoice.setId(id); //Assigning a generated ID to the invoice
-        invoice.put(id, invoice);
         return id;
     }
 
