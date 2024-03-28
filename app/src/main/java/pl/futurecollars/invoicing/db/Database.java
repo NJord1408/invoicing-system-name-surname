@@ -1,18 +1,18 @@
 package pl.futurecollars.invoicing.db;
 
-import pl.futurecollars.invoicing.model.Invoice;
-
 import java.util.List;
 import java.util.Optional;
+import pl.futurecollars.invoicing.model.Invoice;
 
 public interface Database {
 
-    int save(Invoice invoice);
-    Optional<Invoice> getById(int id);
+  int save(Invoice invoice);
 
-    List<Invoice> getAll();
+  Optional<Invoice> getById(int id);
 
-    void update(int id, Invoice updatedInvoice);
+  List<Invoice> getAll();
 
-    void delete(int id);
+  void update(int id, Invoice updatedInvoice);
+
+  void delete(int id);
 }
